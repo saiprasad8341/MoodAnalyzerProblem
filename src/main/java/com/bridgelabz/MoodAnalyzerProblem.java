@@ -2,16 +2,21 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-//UC-1 Given a Message, ability
-//to analyse and respond
-//Happy or Sad Mood
+//UC-2 Handle Exception if
+//User Provides Invalid
+//Mood
 public class MoodAnalyzerProblem {
     public String moodAnalyzer(String text){
-        String temp = text.toLowerCase();
-        if(temp.contains("sad")){
-            System.out.println("SAD");
-            return "SAD";
-        }else {
+        try{
+            String temp = text.toLowerCase();
+            if(temp.contains("sad")){
+                System.out.println("SAD");
+                return "SAD";
+            }else {
+                System.out.println("HAPPY");
+                return "HAPPY";
+            }
+        } catch (NullPointerException e){
             System.out.println("HAPPY");
             return "HAPPY";
         }

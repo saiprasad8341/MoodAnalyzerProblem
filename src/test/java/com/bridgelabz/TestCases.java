@@ -16,4 +16,10 @@ public class TestCases {
         String result = mood.moodAnalyzer("I am happy today");
         Assert.assertEquals("HAPPY", result);
     }
+    @Test
+    public void testCaseNull(){
+        MoodAnalyzerProblem mood = new MoodAnalyzerProblem();
+        String result = mood.moodAnalyzer(null);
+        Assert.assertEquals("HAPPY", result);
+    }
 }
